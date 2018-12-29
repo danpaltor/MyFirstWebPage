@@ -1,0 +1,26 @@
+.diagonal-section {
+  position: relative;
+
+  &__content {
+    position: relative;
+    padding: 2rem 0 4rem;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #f6f6f6;
+    transform: skewY(-1.5deg);
+    //opacity : .075;
+    border : 1px solid $borderColor;
+  }
+
+  &.left {
+    &::before {
+      transform: skewY(1.5deg)
+    }
+  }
+}

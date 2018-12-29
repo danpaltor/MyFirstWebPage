@@ -1,0 +1,40 @@
+/*
+  This boilerplate is based in ITCSS and SMACSS
+*/
+// La guia de estilos ya trae como dependencia a ed-grid
+$max-width: 1200px;
+@import "../../node_modules/edteam-style-guides/edteam-style-guides";
+
+
+// Config
+@import "config/functions";
+@import "config/variables";
+@import "config/mixins";
+
+// Base and elements (generic)
+@import "base/base";
+
+// LAYOUT
+  // Escribe solo los estilos de layout (division en regiones del viewport)
+@import "layout/layout";
+
+// MODULOS (SMACSS) O COMPONENTES (ITCSS)
+  // Son los elementos de UI de tu interfaz, como botones, tablas, menus, etc.
+  // Crea los archivos adicionales que necesites (uno por componente)
+@import "components/buttons";
+@import "components/menus";
+@import "components/users";
+@import "components/subscription-card";
+@import "components/edcamp-features";
+@import "components/social-buttons";
+@import "components/talks";
+@import "components/faq";
+
+// Theme (colors and fonts)
+@import "theme/typography";
+@import "theme/theme";
+
+// Utilities (hacks)
+  // Todos los hacks que hayas necesitado para solucionar conflictos
+  // o resolver situaciones extremas. Se espera poder mejorarlos luego.
+@import "hacks/hacks";

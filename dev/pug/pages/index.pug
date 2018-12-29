@@ -1,0 +1,113 @@
+//- Utilizamos la ruta absoluta definida en ekl archivo gulpfile.babel.js
+extends /config/template
+append config
+  -pageTitle = 'Home'
+  -pageDescription = 'Pagina inicial de EDboilerplatee'
+  -pageImage = 'assets/img/logo.svg'
+
+block main
+  +banner('first',
+          'banner-edcamp.jpg',
+          'Bienvenidos al EDcamp',
+          'El evento internacional de tecnología de EDteam'
+        )
+
+  p.l-50.to-center.center.l-section.padding El EDcamp es el evento internacional de tecnología de EDteam. Dos días para compartir conocimientos, experiencias y crecer profesionalmente. El staff de EDteam completo por primera vez en Lima. ¡Te esperamos!
+
+  .l-50.to-center.center.l-section.padding
+    h2  Últimas noticas del EDcamp
+    p.subtitle Twitea con el hashtag #[b #EDcampLima2018] para aparecer en esta sección
+    <a class="twitter-grid" data-limit="6" data-partner="tweetdeck" href="https://twitter.com/EDteamLat/timelines/1034503390133399553?ref_src=twsrc%5Etfw">EDcamp Lima 2018</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+  section.l-section.diagonal-section
+    .ed-grid.cols-l-2.diagonal-section__content
+      h2.t1.center.span-l-2.section-title Eventos
+      .card.l-block
+        .card__img
+          img(src="/assets/img/tde.jpg" alt="Poster del taller de emprendedores")
+        .card__content
+          .card__title Taller de emprendedores
+          .card__subtitle Viernes 31 de agosto (2pm - 8pm)
+          .card__body 
+            p Aprende emprender. Crea un modelo de negocio escalable y define tu propia propuesta de valor con la mentoría de nuestro equipo.
+          .card__footer
+            p.location Museo de Historia Natural UNMSM, Jesús María
+            a(href="/taller-de-emprendedores").button--ghost--alert.button--tiny Más información
+      .card.l-block
+        .card__img
+          img(src="/assets/img/workshops.jpg" alt="Poster del taller de Emprendimiento")
+        .card__content
+          .card__title Workshops
+          .card__subtitle Sábado 1 de setiembre (9am - 7pm)
+          .card__body 
+            p Talleres de programación, diseño web, emprendimiento y finanzas con el equipo de EDteam
+          .card__footer
+            p.location Edificio empresarial El Almirante, Lince.
+            a(href="/workshops").button--ghost--alert.button--tiny Más información
+
+  section.l-section
+    .ed-grid.cols-l-4
+      h2.t1.center.span-l-4.section-title Expositores
+      // div vacio ocupa una columna
+      div
+      div.home-users
+        +user('Alexys Lozada','alexys.jpg','co', 'Colombia')
+        +user('Beto Quiroga','beto.jpg','bo', 'Bolivia')
+        +user('Jon MirCha','mircha.jpg','mx', 'México')
+      div.home-users
+        +user('Manu Rodriguez','manu.jpg','pe', 'Perú')
+        +user('Freddy Cahuas','freddy.jpg','pe', 'Perú')
+        +user('Álvaro Felipe','alvaro.jpg','pe', 'Perú')
+
+  section.l-section.diagonal-section.left.third
+    .ed-grid.cols-l-2.diagonal-section__content
+      h2.t1.center.span-l-2.section-title Ediciones anteriores
+      .card.l-block
+        .card__img
+          img(src="/assets/img/lima-2016.jpg" alt="EDcamp Lima 2016")
+        .card__content
+          .card__title EDcamp Lima 2016
+          .card__subtitle Viernes 23 de diciembre
+          .card__body
+            p Nuestro primer EDcamp, cuando aún nos llamábamos Escuela Digital y con nuestro equipo participando por streaming.
+          .card__footer
+            p.location Casa Museo Raúl Porras Barrenechea
+            a(href="https://www.facebook.com/EDteamLat/posts/1185481941507381" target="_blank").button--ghost--alert.button--tiny Más información
+      .card.l-block
+        .card__img
+          img(src="/assets/img/bogota-2017.jpg" alt="EDcamp Bogotá 2017")
+        .card__content
+          .card__title EDcamp Bogotá 2017
+          .card__subtitle Viernes 21 y sábado 22 de julio
+          .card__body
+            p Nuestro primer EDcamp internacional, nos subimos a un avión y nos encontramos con nuestra comunidad en Bogotá.
+          .card__footer
+            p.location Escuela de Ingeniería Julio Garavito
+            a(href="https://ed.team/edcamp/bogota-2017" target="_blank").button--ghost--alert.button--tiny Más información
+
+  section.l-section
+    .ed-grid.cols-l-12
+      h2.t1.center.span-l-12.section-title Inscripciones
+      div
+      .span-l-5.l-block
+        +suscriptionCard('tde', 'tde','Taller de emprendimiento', 'Viernes 31 de agosto (2pm - 8pm)', '', '¡Gratis!','* Becas de EDteam para los ganadores','first','https://goo.gl/forms/HXz6YdrH2v7uJfxk2')
+      .span-l-5.l-block
+        +suscriptionCard('workshops', 'workshops', 'Workshops', 'Sábado 1 de setiembre (9am - 7pm)', '', '300', '* Acceso gratuito al taller de emprendimiento', 'cta', 'https://app.ed.team/?compra=89')
+      div
+      .span-l-12.center
+        h3 Tu inscripción incluye
+        ul.edcamp-features
+          li Certificado (sábado 1)
+          li Coffe break (ambos días)
+          li Polo de EDteam (sábado 1)
+          li Libreta y lapicero de EDteam (sabado 1)
+          li Stickers, pines y llaveros (ambos días)
+          li Sorteo de becas a EDteam (ambos días)
+          li Sorteo de polos de EDteam (viernes 31)
+          li Sorteo de pases a los Workshops (viernes 31)
+          li Sorteo de mouse Razer Mamba Tournament Edition (viernes 31)
+          li Sorteo de teclado gamer Poseidon Z RGB (viernes 31)
+          li Sorteo de mouse logitech G900 Chaos Spectrum (sábado 1)
+          li Sorteo de teclado Logitech G810 Orion Spectrum (sábado 1)
+
+

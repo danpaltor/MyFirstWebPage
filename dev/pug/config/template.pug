@@ -1,0 +1,34 @@
+block config
+  include variables
+  include /mixins/banner
+  include /mixins/user
+  include /mixins/user-profile
+  include /mixins/inscription-card
+
+doctype html
+html(lang="es")
+  head
+    title My awesome title
+    meta(charset="utf-8")
+    meta(name="viewport" content="initial-scale=1.0, width=device-width")
+    meta(name="twitter:card" content="summary_large_image")
+    meta(name="twitter:site" content=twitterAccount)
+    meta(property="og:title" content=pageTitle)
+    meta(property="og:description" content=pageDescription)
+    meta(property="og:image" content=pageImage)
+    link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,400i,700|Open+Sans:700")
+    link(rel="stylesheet" href="/assets/css/styles.css")
+    link(rel="shortcut icon" href="/assets/img/favicon.png")
+
+    
+  body
+    include /includes/header 
+    include /includes/topbar
+
+    block main
+
+    include /includes/footer
+
+
+
+    script(src="/js/scripts-min.js")

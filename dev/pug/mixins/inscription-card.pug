@@ -1,0 +1,13 @@
+mixin suscriptionCard(className,image,title,subtitle,price,priceFinal,message,button,target)
+  .card.card--mini-horizontal.card--subscription(class=`card--${className}`)
+    .card__img
+      img(src=`/assets/img/card__img-${image}.jpg`)
+    .card__content
+      .card__title= title
+      .card__subtitle=subtitle
+      a(class=`button--${button}` href=target)
+        | S/
+        del=price
+        span=priceFinal
+  span.smaller=message
+

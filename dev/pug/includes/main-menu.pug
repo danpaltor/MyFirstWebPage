@@ -1,0 +1,8 @@
+nav.main-menu(itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation")#main-menu
+  ul
+    each item in menu
+      -var linkName = item
+      -var linkURL = item.toLowerCase().split(' ').join('-')
+      -var target = val === 'https://ed.team' ? '"_blank"' : ''
+      li.main-menu__item(itemprop="url")
+          a.main-menu__link(href=`/${linkURL}` target=target itemprop="name" title= "Enlace de " + key)= linkName

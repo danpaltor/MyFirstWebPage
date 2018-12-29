@@ -1,0 +1,9 @@
+mixin banner(color,image,title,subtitle)
+  .main-banner.l-section(class=`main-banner--${color}`)
+      .ed-container
+        .ed-item.l-75.to-center
+          img(src=`/assets/img/${image}`).main-banner__img
+          .main-banner__data
+            img(src="/assets/img/logo.svg").edcamp-logo
+            h1=title
+            p.subtitle=subtitle

@@ -1,0 +1,37 @@
+.main-header {
+    @include from(l) {
+        height: var(--header-height);
+    }
+}
+
+
+@include from(l) {
+  :root {
+    --header-height: 4rem;
+  }
+}
+
+.main-header {
+  + .l-section,
+  + [class*=topbar]{
+    margin-top : var(--header-height) !important;
+  }
+}
+
+
+.main-footer {
+  @include to(l) {
+    text-align : center;
+
+    span {
+      margin-bottom : 1rem;
+    }
+  }
+}
+
+
+@include to(l) {
+  .l-section {
+    margin-bottom : 2rem;
+  }
+}
