@@ -38,3 +38,4 @@ Es una sencilla estructura para un proyecto web estático.
 
 Siéntase libre de usarlo y de reportar cualquier problema que encuentre o sugerencia que tenga.
 EDboilerplate es gratis, open source y de la comunidad para la comunidad.
+
